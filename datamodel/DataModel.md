@@ -4,7 +4,7 @@
 
 The following data model is a subset of a larger data model and contains the entities exposed via the **REST APIs** documented [here](../mockup-api-doc.png)
 
-![](../assets/markdown-img-paste-20181129002307908.png)
+![](../assets/datamodel-20.png)
 
 This page will explain what each entities are and how they are related to one another.
 
@@ -41,16 +41,39 @@ Accounts have a `BALANCE` and a `VOLUME_LENDING` *(for Loan and Mortgage account
 ## Transaction
 Transactions are all the inbound and outbound money movement from an account to another account or to the account from another account. Accounts can be accounts within the Bank or third parties.
 
-Transaction types:
+**Transaction Categories:**
 + Cash Withdrawal  
 + Cheque Deposit
 + Cheque Written
 + Credit Card
++ Debit Card
 + Transfer Inbound
 + Transfer Outbound
 
-A large part of the transactions are `Credit Card` and `Cash Withdrawal` categories.
-![](assets/markdown-img-paste-20181130010744108.png)
+
+**Transaction Subcategories:**
+
++ ONLINE
++ OTHERS
++ CONTACTLESS
++ MOBILE
++ PENSION
++ ATM
++ SALARY
+
+A large part of the transactions are `Credit Card`, `Debit Card` and `Cash Withdrawal` categories.
+
+**Transaction enhanced_payments:**
+
+It is a JSON object where you can find additional information about the payment.
+
+    "enhanced_payment":{
+        "product_id":948477589400,
+        "garanty_certificate_number":"G984923",
+        "website_url":"www.ibm.com"
+    }
+
+
 
 > **Note:** in the API documentation there is a notice about the `POST` API for the transactions. Note that when you initiate a transaction it is reflected on the related account.
 
@@ -62,13 +85,12 @@ Customers are generated randomly based on a series of distribution rules which a
 Distribution which are not UK specific are the marital status, social class and employment status which are more generic distribution rules based on observations of western countries and USA, thus pretty close to what might be expected in United Kingdom.
 > **Note**: bias or deviation from the distribution rules might be observed depending on the volume of data generated. Obviously, the more data, the closer we get to the distribution rules.
 
-Customers are uniquely identified by their `CUSTOMER_ID` which ranges from 2 to 2802.
+Customers are uniquely identified by their `CUSTOMER_ID` which ranges from 2 to 2734.
 
 ### Marital status
 Possible values are:
 + Married
 + Single
-+ Divorced
 + Child
 
 ### Family_ID
@@ -76,7 +98,8 @@ Family_ID is a field that allows to regroup customers (persons) that are part of
 
 ### Social Class
 Possible values are:
-+ working
++ Working
++ Dependent
 + Retired
 + Student
 + Unemployed
