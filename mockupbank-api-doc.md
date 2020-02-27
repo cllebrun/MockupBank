@@ -782,13 +782,19 @@ The following code is the payload that needs to be passed to the API which conta
 **Body Request:**
 ```
 {
-  "amount": -120,
-  "category": "Cash Withdrawal",
-  "transactDate": 1431965777000,   
-  "transactionDesc": "Cash Withdrawal ... ATM-1"
+    "amount":-12,
+    "category":"Debit Card",
+    "subcategory":"CONTACTLESS",
+    "transactDate":1582797327000,
+    "transactionDesc":"shopping",
+    "enhanced_payment":{
+        "product_id":948477589400,
+        "garanty_certificate_number":"G984923",
+        "website_url":"www.ibm.com"
+    }
 }
 ```  
-> **Note:** The transaction date (**transactDate**) is a timestamp in milliseconds. It gets automatically converted to a proper date format. 
+> **Note:** The transaction date (**transactDate**) is a timestamp in milliseconds. It gets automatically converted to a proper date format.
 
 **Response :**  HTTP Response code 200
 ```
