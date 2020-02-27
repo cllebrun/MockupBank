@@ -4,7 +4,7 @@ All you need to know about the fictious **Banking Data Model &amp; APIs** for th
 
 This page will provide high level documentation, the basics and links to get to the **APIs** and more detailed documentation.
 + Detailed documentation of the **IBM API Connect APIs** is [here](mockupbank-api-doc.md)
-+ Access to a Node-RED application as an example on how to consume the APIs [here](https://mockupbankuk.eu-gb.mybluemix.net/) (You only have access as a viewer to get inspiration and build your own Node-RED application.)
++ Access to a Node-RED application as an example on how to consume the APIs [here]() (You only have access as a viewer to get inspiration and build your own Node-RED application.)
 + Detailed documentation of the Data Model is [here](datamodel/DataModel.md)
 
 ---
@@ -30,7 +30,7 @@ Everything you need to know about how to develop applications with Node-RED is a
 You can find, open source Node-RED flows, nodes libraries, documentation...
 
 As an example of usage of the APIs, a sample Web Application has been built for you to consume the URLs as an example of rapidly prototyping an app.
-This application UI is available at the following URL: https://mockupbankuk.eu-gb.mybluemix.net/ui  
+This application UI is available at the following URL:
 
 ![](assets/markdown-img-paste-20191001123544158.png)
 
@@ -40,7 +40,7 @@ This application UI is available at the following URL: https://mockupbankuk.eu-g
 The **Data Model** is a simplistic one based on Customers, Accounts and Transactions.
 
 The provided data is based on the following schema which is an extract of a larger data model.
-![](assets/markdown-img-paste-20181129002307908.png)
+![](assets/datamodel-20.png)
 
 More details about the data model and its entities is available [here](datamodel/DataModel.md)
 
