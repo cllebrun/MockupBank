@@ -636,57 +636,12 @@ Retrieves transaction list for a given account ID. IDs are string (such as '4822
 ```
 [
   {
-    "internalId": 389982,
-    "amount": 23.27,
-    "category": "Transfer Inbound",
-    "transactDate": 1513206000000,
-    "transactionDesc": "Transfer ... Dividend Corporate Bond LXI                                                                                                                                                                ",
-    "account": {
-      "id": {
-        "accountId": 4822,
-        "bankId": 1
-      },
-      "income": 0,
-      "localProductCd": "Investment",
-      "localProductNm": "Investment",
-      "productCatNm": "Investment",
-      "productClsNm": "Investment",
-      "productGrpNm": "Investment",
-      "totalVolume": 0,
-      "volumeLending": 0,
-      "volumeSavings": 0,
-      "balance": 0
-    }
-  },
-  {
-    "internalId": 389983,
-    "amount": 23.27,
-    "category": "Transfer Inbound",
-    "transactDate": 1528927200000,
-    "transactionDesc": "Transfer ... Dividend Corporate Bond LXI                                                                                                                                                                ",
-    "account": {
-      "id": {
-        "accountId": 4822,
-        "bankId": 1
-      },
-      "income": 0,
-      "localProductCd": "Investment",
-      "localProductNm": "Investment",
-      "productCatNm": "Investment",
-      "productClsNm": "Investment",
-      "productGrpNm": "Investment",
-      "totalVolume": 0,
-      "volumeLending": 0,
-      "volumeSavings": 0,
-      "balance": 0
-    }
-  },
-  {
-    "internalId": 389984,
+    "internalId": 395104,
     "amount": 55.49,
     "category": "Transfer Inbound",
-    "transactDate": 1518130800000,
-    "transactionDesc": "Transfer ... Dividend Corporate Bond JZY                                                                                                                                                                ",
+    "subcategory": "OTHERS",
+    "transactDate": 1574294400000,
+    "transactionDesc": "Transfer ... Dividend Corporate Bond JZY",
     "account": {
       "id": {
         "accountId": 4822,
@@ -705,11 +660,60 @@ Retrieves transaction list for a given account ID. IDs are string (such as '4822
     }
   },
   {
-    "internalId": 389985,
+    "internalId": 395102,
+    "amount": 23.27,
+    "category": "Transfer Inbound",
+    "subcategory": "OTHERS",
+    "transactDate": 1569369600000,
+    "transactionDesc": "Transfer ... Dividend Corporate Bond LXI",
+    "account": {
+      "id": {
+        "accountId": 4822,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Investment",
+      "localProductNm": "Investment",
+      "productCatNm": "Investment",
+      "productClsNm": "Investment",
+      "productGrpNm": "Investment",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": 0
+    }
+  },
+  {
+    "internalId": 395103,
     "amount": 55.49,
     "category": "Transfer Inbound",
-    "transactDate": 1533765600000,
-    "transactionDesc": "Transfer ... Dividend Corporate Bond JZY                                                                                                                                                                ",
+    "subcategory": "OTHERS",
+    "transactDate": 1558396800000,
+    "transactionDesc": "Transfer ... Dividend Corporate Bond JZY",
+    "account": {
+      "id": {
+        "accountId": 4822,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Investment",
+      "localProductNm": "Investment",
+      "productCatNm": "Investment",
+      "productClsNm": "Investment",
+      "productGrpNm": "Investment",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": 0
+    }
+  },
+  {
+    "internalId": 395101,
+    "amount": 23.27,
+    "category": "Transfer Inbound",
+    "subcategory": "OTHERS",
+    "transactDate": 1553731200000,
+    "transactionDesc": "Transfer ... Dividend Corporate Bond LXI",
     "account": {
       "id": {
         "accountId": 4822,
@@ -729,12 +733,67 @@ Retrieves transaction list for a given account ID. IDs are string (such as '4822
   }
 ]
 ```
+
+
+## HTTP POST
+
+
+__Add a transaction for a given account__
+
+> **Note: there is a specific Base URL for the POST**  
+
+Base URL = http://reboot-mockup-bank.eu-gb.mybluemix.net/
+
+`Base URL/PATH + “/transaction/bank/{bid}/account/{id}”`
+
+**Request URL:**
+`http://reboot-mockup-bank.eu-gb.mybluemix.net/bankingapis/transaction/bank/{bid}/account/{aid}`
+
+*JSON Message to POST*
+The following code is the payload that needs to be passed to the API which contains the details of the transaction.
+> **Note:** groups that want to use the POST API during the Hackathon should contact IBM Mentors for support. No quality control is done on the data, so as some fields are human entry.
+
+**Body Request:**
+```
+{
+    "amount":-12,
+    "category":"Debit Card",
+    "subcategory":"CONTACTLESS",
+    "transactDate":1582797327000,
+    "transactionDesc":"shopping",
+    "enhanced_payment":{
+        "product_id":948477589400,
+        "garanty_certificate_number":"G984923",
+        "website_url":"www.ibm.com"
+    }
+}
+```  
+> **Note:** The transaction date (**transactDate**) is a timestamp in milliseconds. It gets automatically converted to a proper date format.
+
+**Response :**  HTTP Response code 200
+```
+{
+  "transactDate": 1582797327000,
+  "transactionDesc": "shopping",
+  "category": "Debit Card",
+  "subcategory": "CONTACTLESS",
+  "enhanced_payment": {
+    "product_id": 948477589400,
+    "garanty_certificate_number": "G984923",
+    "website_url": "www.ibm.com"
+  },
+  "amount": -12,
+  "accountId": 48,
+  "bankId": 1,
+  "internalId": 402730
+}
+```
 __Get Account Transactions for a customer__
 
 `Base URL/PATH + “/transaction/bank/{bid}/customer/{id}”`
 
-Retrieves all transactions for a given customer based on a customer ID. You may also include the account category to narrow the search.
-> **Note:** the search returns only the 100 first transactions matching query parameters. IDs are string (such as '123').
+Retrieves all transactions for a given customer based on a customer ID. You may also include the account category or subcategory to narrow the search.
+> **Note:**  IDs are string (such as '123').
 
 
 **Response :**  a list of transactions
@@ -761,53 +820,133 @@ Retrieves all transactions for a given customer based on a customer ID. You may 
 ]
 ```
 
+__Get Account Transactions for a customer for specific Year and Month__
 
-## HTTP POST
+`Base URL/PATH + “/transaction/bank/{bid}/customer/{id}/year/{year}/month/{month}”`
 
-__Add a transaction for a given account__
 
-> **Note: there is a specific Base URL for the POST**  
+Retrieves all transactions for a given customer based on a customer ID. You may also include the account category or subcategory to narrow the search.
+> **Note:** IDs are string (such as '114'). Year can be '2019'. Month can be '1'
 
-Base URL = http://reboot-mockup-bank.eu-gb.mybluemix.net/
 
-`Base URL/PATH + “/transaction/bank/{bid}/account/{id}”`
-
-**Request URL:**
-`http://reboot-mockup-bank.eu-gb.mybluemix.net/bankingapis/transaction/bank/{bid}/account/{aid}`
-
-*JSON Message to POST*
-The following code is the payload that needs to be passed to the API which contains the details of the transaction.
-> **Note:** groups that want to use the POST API during the Hackathon should contact IBM Mentors for support (either Clémence Lebrun or Emmanuel Génard)
-
-**Body Request:**
+**Response :**  a list of transactions
 ```
-{
-    "amount":-12,
-    "category":"Debit Card",
-    "subcategory":"CONTACTLESS",
-    "transactDate":1582797327000,
-    "transactionDesc":"shopping",
-    "enhanced_payment":{
-        "product_id":948477589400,
-        "garanty_certificate_number":"G984923",
-        "website_url":"www.ibm.com"
+[
+  {
+    "internalId": 37897,
+    "amount": -40,
+    "category": "Cash Withdrawal",
+    "subcategory": "ATM",
+    "transactDate": 1548892800000,
+    "transactionDesc": "Cash Withdrawal ... Manchester - DORCHESTER CRESCENT ATM-1",
+    "account": {
+      "id": {
+        "accountId": 454,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Current",
+      "localProductNm": "Current",
+      "productCatNm": "Current",
+      "productClsNm": "Current",
+      "productGrpNm": "Current",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": -45271
     }
-}
-```  
-> **Note:** The transaction date (**transactDate**) is a timestamp in milliseconds. It gets automatically converted to a proper date format.
+  },
+  {
+    "internalId": 37895,
+    "amount": -342.7,
+    "category": "Debit Card",
+    "subcategory": "OTHERS",
+    "transactDate": 1548892800000,
+    "transactionDesc": "Card ... Card No: 000454-99 ... Junglee Foodmart Tower Hamlets",
+    "account": {
+      "id": {
+        "accountId": 454,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Current",
+      "localProductNm": "Current",
+      "productCatNm": "Current",
+      "productClsNm": "Current",
+      "productGrpNm": "Current",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": -45271
+    }
+  },
+```
+__Get A Transaction__
 
-**Response :**  HTTP Response code 200
+`Base URL/PATH + “/transaction/bank/{bid}/{id}”`
+
+Retrieves only one specific transaction
+> **Note:**  IDs are string (such as '37895').
+
+
+**Response :**  a transaction
+```
+[
+  {
+    "internalId": 37895,
+    "amount": -342.7,
+    "category": "Debit Card",
+    "subcategory": "OTHERS",
+    "transactDate": 1548892800000,
+    "transactionDesc": "Card ... Card No: 000454-99 ... Junglee Foodmart Tower Hamlets",
+    "account": {
+      "id": {
+        "accountId": 454,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Current",
+      "localProductNm": "Current",
+      "productCatNm": "Current",
+      "productClsNm": "Current",
+      "productGrpNm": "Current",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": -45271
+    }
+  }
+]
+```
+__Get the total number of transactions by Customer ID__
+
+`Base URL/PATH + “/transaction/total/bank/{bid}/customer/{id}”`
+
+Retrieves the total of transactions for one customer. You may also include the account category or subcategory to narrow the search.
+> **Note:**  IDs are string (such as '114').
+
+
+**Response :**  number of transactions
 ```
 {
-  "transactDate": 1431965777000,
-  "transactionDesc": "transactionDesc": "Cash Withdrawal ... ATM-1",
-  "category": "Cash Withdrawal",
-  "amount": -120,
-  "accountId": 123,
-  "bankId": 1
+  "size": 611
 }
 ```
 
+__Get the total number of transactions by Customer ID for specific Year and Month__
+
+`Base URL/PATH + “/transaction/total/bank/{bid}/customer/{id}/year/{year}/month/{month}”`
+
+Retrieves the total of transactions for one customer. You may also include the account category or subcategory to narrow the search.
+> **Note:**  IDs are string (such as '114'). Year can be '2019'. Month can be '1'
+
+
+**Response :**  number of transactions
+```
+{
+  "size": 58
+}
+```
 ## DATA TYPE DESCRIPTIONS
 
 Please note that the data is “synthetic” and has been generated to sort of reflect the UK. This dummy bank therefore looks familiar but is by no means perfect. As a developer, think of it as a large “stub” representing a bank.
@@ -907,18 +1046,37 @@ Valid values are:
 Transactions information
 * **accountId:**	The identification (Id) for the account.
 * **transactDate:**	Actual date of transaction in milliseconds
-* **category:**	The category or type of the transaction.
-Valid values are:
-  * Cash Withdrawal
-  * Cheque Deposit
-  * Cheque Written
-  * Credit Card
-  * Transfer Inbound
-  * Transfer Outbound
+* **category**
++ Cash Withdrawal  
++ Cheque Deposit
++ Cheque Written
++ Credit Card
++ Debit Card
++ Transfer Inbound
++ Transfer Outbound
+
+
+* **subcategories**
++ ONLINE
++ OTHERS
++ CONTACTLESS
++ MOBILE
++ PENSION
++ ATM
++ SALARY
 
 * **transactionDesc:**	The description of the transaction.
 * **amount:**	-Number (removing money from account), +Number (adding money to account)
 
+* **enhanced_payments**
+
+It is a JSON object where you can find additional information about the payment.
+
+    "enhanced_payment":{
+        "product_id":948477589400,
+        "garanty_certificate_number":"G984923",
+        "website_url":"www.ibm.com"
+    }
 
 ### LOCATION
 
@@ -951,7 +1109,7 @@ Valid values are:
 * latitudeD:	Latitude decimal
 * longitudeD:	Longtitude decimal
 
-### *MUNICIPALITY*
+### MUNICIPALITY
 
 An area related to CUSTOMER, BANK or ATM.
 * postalcode:	Postal code
