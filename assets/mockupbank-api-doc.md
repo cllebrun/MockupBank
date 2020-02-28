@@ -1,4 +1,4 @@
-# IBM API Connect APIs documentation
+# IBM Mockupbank APIs documentation
  This guide is your introduction to quickly get started leveraging **IBM Cloud** and the **Banking APIs** to create new solutions. This document describes the APIs available.
 
 
