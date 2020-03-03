@@ -62,7 +62,11 @@ With Node-RED, you could for example create your web application to visualise da
 
 As an example of usage of the APIs, a sample Web Application has been built as an example of rapidly prototyping an app.
 
-This application UI is available at the following URL:
+We have built in the first tab examples of simple operations to execute with Node-RED and the APIs:
+
+![](assets/babysteps.png)
+
+We also have built a more advanced piece of code which create a web  UI available at the following URL:
 
 ![](assets/markdown-img-paste-20191001123544158.png)
 
