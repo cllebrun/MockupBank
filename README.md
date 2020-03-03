@@ -26,7 +26,7 @@ get /bankingapis/customer/bank/{bid}/multi
 You will need specific node libraries to make your API call. This is dependant of your programming language. There are usually several methods to do it (https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b)
 From the Mockup Bank side, you will need the right path and the right parameters as detailed in the doc.
 
-If you are not very comfortable with any programming language, one possibly for you to create an application consuming APIs easily would be to use Node-RED (Look at the Node-RED section)
+If you are not very comfortable with any programming language, one possibility for you to create an application consuming APIs easily would be to use Node-RED (Look at the Node-RED section)
 
 
 ---
