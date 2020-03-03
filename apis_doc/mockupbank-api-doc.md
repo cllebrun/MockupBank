@@ -9,9 +9,6 @@ The **API swagger** for the Mockbank is available here: https://mockupbank-da.bn
 **Path:**   /bankingapis/
 
 
-
-![](assets/markdown-img-paste-20191001150845141.png)
-
 ---
 ## API list
 <ul>
