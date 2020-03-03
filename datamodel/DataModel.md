@@ -41,7 +41,41 @@ Accounts have a `BALANCE` and a `VOLUME_LENDING` *(for Loan and Mortgage account
 ## Transaction
 Transactions are all the inbound and outbound money movement from an account to another account or to the account from another account. Accounts can be accounts within the Bank or third parties.
 
-**Transaction Categories:**
+An example of a Transaction existing in the Mock Data:
+```
+[
+  {
+    "internalId": 1627,
+    "amount": -20,
+    "category": "Cash Withdrawal",
+    "subcategory": "ATM",
+    "transactDate": 1583107200000,
+    "transactionDesc": "Cash Withdrawal ... Hillingdon - LEAD HILL VIEW ATM-1",
+    "account": {
+      "id": {
+        "accountId": 54,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Current",
+      "localProductNm": "Current",
+      "productCatNm": "Current",
+      "productClsNm": "Current",
+      "productGrpNm": "Current",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": 40239
+    }
+  }
+]
+```
+
+**internalId:**	The identification (Id) for the transaction.
+
+**amount:**	-Number (removing money from account), +Number (adding money to account)
+
+**category**
 + Cash Withdrawal  
 + Cheque Deposit
 + Cheque Written
@@ -50,9 +84,9 @@ Transactions are all the inbound and outbound money movement from an account to 
 + Transfer Inbound
 + Transfer Outbound
 
+> **Note:** A large part of the transactions are `Credit Card`, `Debit Card` and `Cash Withdrawal` categories.
 
-**Transaction Subcategories:**
-
+**subcategory:**
 + ONLINE
 + OTHERS
 + CONTACTLESS
@@ -61,9 +95,21 @@ Transactions are all the inbound and outbound money movement from an account to 
 + ATM
 + SALARY
 
-A large part of the transactions are `Credit Card`, `Debit Card` and `Cash Withdrawal` categories.
+**transactDate:**	Actual date of transaction in milliseconds
 
-**Transaction enhanced_payments:**
+**transactionDesc:**	The description of the transaction.
+
+**Account information**
+
+ * **accountId:**	The identification (Id) for the account.
+
+ * **balance** The balance of the account after the transaction
+
+
+
+Additional information can be added to a transaction when you POST one. It would be in the enhanced_payment field:
+
+**enhanced_payment**
 
 It is a JSON object where you can find additional information about the payment.
 
@@ -73,7 +119,39 @@ It is a JSON object where you can find additional information about the payment.
         "website_url":"www.ibm.com"
     }
 
+An example of a Transaction containing enhanced_payment:
 
+```
+[
+  {
+    "internalId": 402746,
+    "amount": -12,
+    "category": "Debit Card",
+    "subcategory": "CONTACTLESS",
+    "enhanced_payment": "{product_id:948477589400,garanty_certificate_number:G984923,website_url:www.ibm.com}",
+    "transactDate": 1582761600000,
+    "transactionDesc": "shopping",
+    "account": {
+      "id": {
+        "accountId": 54,
+        "bankId": 1
+      },
+      "income": 0,
+      "localProductCd": "Current",
+      "localProductNm": "Current",
+      "productCatNm": "Current",
+      "productClsNm": "Current",
+      "productGrpNm": "Current",
+      "totalVolume": 0,
+      "volumeLending": 0,
+      "volumeSavings": 0,
+      "balance": 40227
+    }
+  }
+]
+
+
+```
 
 > **Note:** in the API documentation there is a notice about the `POST` API for the transactions. Note that when you initiate a transaction it is reflected on the related account.
 
