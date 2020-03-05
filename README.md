@@ -51,6 +51,8 @@ Node-RED is an open source programming tool for wiring together hardware devices
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 
+Note that you can create a Node-RED app on IBM Cloud without installing anything on your machine. It will let you easily leverage any APIs and connect to IBM Watson services for example... https://cloud.ibm.com/catalog/starters/node-red-starter
+
 Everything you need to know about how to develop applications with Node-RED is available at: https://nodered.org/
 You can find, open source Node-RED flows, nodes libraries, documentation...
 
@@ -62,7 +64,7 @@ With Node-RED, you could for example create your web application to visualise da
 
 As an example of usage of the APIs, a sample Web Application has been built as an example of rapidly prototyping an app.
 
-We have built in the first tab examples of simple operations to execute with Node-RED and the APIs:
+We have built in the first tab examples of simple operations to execute with Node-RED and the APIs to help you to get started:
 
 ![](assets/babysteps.png)
 
