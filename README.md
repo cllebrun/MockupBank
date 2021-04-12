@@ -33,7 +33,7 @@ If you are not very comfortable with any programming language, one possibility f
 
 ### The API Swagger  
 
-The **API swagger** for the Mockbank is available here: https://mockupbank-da.bnk-kno.nca.ihost.com/api/explorer/#/
+The **API swagger** for the Mockbank is available here: (TBD)
 
 
 > **Note:** the above URL is the swagger which will allow you to test the APIs and the domain for all the APIs for the *MockupBank application*.
