@@ -2,9 +2,9 @@
  This guide is your introduction to quickly get started leveraging **IBM Cloud** and the **Banking APIs** to create new solutions. This document describes the APIs available.
 
 
-The **API swagger** for the Mockbank is available here: https://mockupbank-da.bnk-kno.nca.ihost.com/api/explorer/#/
+The **API swagger** for the Mockbank is available here: 
 
-**Base URL:** https://mockupbank-da.bnk-kno.nca.ihost.com
+**Base URL:** 
 
 **Path:**   /bankingapis/
 
