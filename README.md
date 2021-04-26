@@ -87,7 +87,7 @@ More details about the data model and its entities is available [here](datamodel
 ---
 ### The Data Dynamic Dashboard  
 
-A dynamic dashboard is available as a mean of descriptive analytic [here](https://eu-gb.dataplatform.cloud.ibm.com/dashboards/c30b0802-4968-4b88-a71f-d2f1b60e86ae/view/7c35c90104a018965ff6c0e4079f24527f36715db1bb8a0380877b4959632497a96d1691c87a490c89120264fbed445a9b)
+A dynamic dashboard is available as a mean of descriptive analytic
 
 
 The dashboard is composed of three tabs:
