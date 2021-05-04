@@ -4,7 +4,7 @@ All you need to know about the fictious **Banking Data Model &amp; APIs** for th
 
 This page will provide high level documentation, the basics and links to get to the **APIs** and more detailed documentation.
 + Detailed documentation of the **IBM Mockup bank APIs** is [here](apis_doc/mockupbank-api-doc.md)
-+ Access to a Node-RED application as an example on how to consume the APIs (You only have access as a viewer to get inspiration and build your own Node-RED application. You can copy and export the flows) [here](https://mockupbankuk.eu-gb.mybluemix.net/red)
++ Access to a Node-RED application as an example on how to consume the APIs (You only have access as a viewer to get inspiration and build your own Node-RED application. You can copy and export the flows) [here](https://mockupbank.eu-de.mybluemix.net/red)
 + Detailed documentation of the Data Model is [here](datamodel/DataModel.md)
 
 ---
@@ -33,7 +33,7 @@ If you are not very comfortable with any programming language, one possibility f
 
 ### The API Swagger  
 
-The **API swagger** for the Mockbank is available here: https://mockupbank-da.bnk-kno.nca.ihost.com/api/explorer/#/
+The **API swagger** for the Mockbank is available here: http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com/api/explorer/#/
 
 
 > **Note:** the above URL is the swagger which will allow you to test the APIs and the domain for all the APIs for the *MockupBank application*.
@@ -51,7 +51,7 @@ Node-RED is an open source programming tool for wiring together hardware devices
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 
-Note that you can create a Node-RED app on IBM Cloud without installing anything on your machine. It will let you easily leverage any APIs and connect to IBM Watson services for example... https://cloud.ibm.com/catalog/starters/node-red-starter
+Note that you can create a Node-RED app on IBM Cloud without installing anything on your machine. It will let you easily leverage any APIs and connect to IBM Watson services for example: [here](https://cloud.ibm.com/developer/appservice/create-app?starterKit=59c9d5bd-4d31-3611-897a-f94eea80dc9f&defaultLanguage=undefined)
 
 Everything you need to know about how to develop applications with Node-RED is available at: https://nodered.org/
 You can find, open source Node-RED flows, nodes libraries, documentation...
@@ -68,11 +68,11 @@ We have built in the first tab examples of simple operations to execute with Nod
 
 ![](assets/babysteps.png)
 
-We also have built a more advanced piece of code which create a web  UI available at the following URL: https://mockupbankuk.eu-gb.mybluemix.net/ui
+We also have built a more advanced piece of code which create a web  UI available at the following URL: https://mockupbank.eu-de.mybluemix.net/ui
 
 ![](assets/markdown-img-paste-20191001123544158.png)
 
-The Node-RED application code (you can copy and export the flows ) is available here: [here](https://mockupbankuk.eu-gb.mybluemix.net/red)
+The Node-RED application code (you can copy and export the flows ) is available here: [here](https://mockupbank.eu-de.mybluemix.net/red)
 
 ---
 ### The Data model  
@@ -87,7 +87,7 @@ More details about the data model and its entities is available [here](datamodel
 ---
 ### The Data Dynamic Dashboard  
 
-A dynamic dashboard is available as a mean of descriptive analytic [here](https://eu-gb.dataplatform.cloud.ibm.com/dashboards/c30b0802-4968-4b88-a71f-d2f1b60e86ae/view/7c35c90104a018965ff6c0e4079f24527f36715db1bb8a0380877b4959632497a96d1691c87a490c89120264fbed445a9b)
+A dynamic dashboard is available as a mean of descriptive analytic 
 
 
 The dashboard is composed of three tabs:

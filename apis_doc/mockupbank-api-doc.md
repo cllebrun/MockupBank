@@ -2,9 +2,9 @@
  This guide is your introduction to quickly get started leveraging **IBM Cloud** and the **Banking APIs** to create new solutions. This document describes the APIs available.
 
 
-The **API swagger** for the Mockbank is available here: https://mockupbank-da.bnk-kno.nca.ihost.com/api/explorer/#/
+The **API swagger** for the Mockbank is available here: http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com/api/explorer/#/
 
-**Base URL:** https://mockupbank-da.bnk-kno.nca.ihost.com
+**Base URL:** http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com
 
 **Path:**   /bankingapis/
 
@@ -71,7 +71,7 @@ The **API swagger** for the Mockbank is available here: https://mockupbank-da.bn
 ---
 ## Operations
 
-All `GET` and `POST` operations are grouped under a category. The operations are accessible as REST resources from the **[API Portal](https://sb-bsc-4-or-gisc-lbg.developer.eu.apiconnect.ibmcloud.com)**.
+All `GET` and `POST` operations are grouped under a category.
 
 
 ### BANK
@@ -739,12 +739,12 @@ __Add a transaction for a given account__
 
 > **Note: there is a specific Base URL for the POST**  
 
-Base URL = http://reboot-mockup-bank.eu-gb.mybluemix.net/
+Base URL = http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com
 
 `Base URL/PATH + “/transaction/bank/{bid}/account/{id}”`
 
 **Request URL:**
-`http://reboot-mockup-bank.eu-gb.mybluemix.net/bankingapis/transaction/bank/{bid}/account/{aid}`
+`http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com/bankingapis/transaction/bank/{bid}/account/{aid}`
 
 *JSON Message to POST*
 The following code is the payload that needs to be passed to the API which contains the details of the transaction.
