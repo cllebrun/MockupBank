@@ -4,11 +4,9 @@ All you need to know about the fictious **Banking Data Model &amp; APIs** for th
 
 This page will provide high level documentation, the basics and links to get to the **APIs** and more detailed documentation.
 + Detailed documentation of the **IBM Mockup bank APIs** is [here](apis_doc/mockupbank-api-doc.md)
-<<<<<<< HEAD
+
 + Access to a Node-RED application as an example on how to consume the APIs (You only have access as a viewer to get inspiration and build your own Node-RED application. You can copy and export the flows) [here](https://mockupbank.eu-de.mybluemix.net/red)
-=======
-+ Access to a Node-RED application as an example on how to consume the APIs (You only have access as a viewer to get inspiration and build your own Node-RED application. 
->>>>>>> origin/master
+
 + Detailed documentation of the Data Model is [here](datamodel/DataModel.md)
 
 ---
@@ -37,11 +35,9 @@ If you are not very comfortable with any programming language, one possibility f
 
 ### The API Swagger  
 
-<<<<<<< HEAD
+
 The **API swagger** for the Mockbank is available here: http://mockup-bank-1.apps.ocp1-bsc.nca.ihost.com/api/explorer/#/
-=======
-The **API swagger** for the Mockbank is available here: (TBD)
->>>>>>> origin/master
+
 
 
 > **Note:** the above URL is the swagger which will allow you to test the APIs and the domain for all the APIs for the *MockupBank application*.
@@ -95,11 +91,9 @@ More details about the data model and its entities is available [here](datamodel
 ---
 ### The Data Dynamic Dashboard  
 
-<<<<<<< HEAD
-A dynamic dashboard is available as a mean of descriptive analytic 
-=======
+
 A dynamic dashboard is available as a mean of descriptive analytic
->>>>>>> origin/master
+
 
 
 The dashboard is composed of three tabs:
