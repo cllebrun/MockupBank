@@ -2,7 +2,7 @@
 
 ## Data model
 
-The following data model is a subset of a larger data model and contains the entities exposed via the **REST APIs** documented [here](../mockup-api-doc.png)
+The following data model is a subset of a larger data model and contains the entities exposed via the **REST APIs** documented [here](../mockupbank-api-doc.md)
 
 ![](../assets/datamodel-20.png)
 
